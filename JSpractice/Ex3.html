@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Упражнение 3</title>  
+</head>
+<body>
+    <p>HI</p>
+    <p>Ещё какой-то абзац текста</p>
+    <script>
+        var nameWin = prompt("Введите сюда своё имя!", "Введите имя!!!");
+    
+    
+            document.body.innerHTML += "<p>Ваше имя: " + nameWin + "</p>";
+    
+            if (confirm("Начать заново?")) {
+    
+                if (confirm("Ну завязывай уже!")) {
+                alert("Эххх..."); 
+                }
+                else {
+                    alert("Ну наконец-то!");
+                }
+            }
+            else {
+                alert("Ну и правильно!");
+            }
+    </script> 
+</body> 
+</html>
