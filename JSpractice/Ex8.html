@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex8</title>
+    <script>
+        function ssilka() {
+            var userAgent = navigator.userAgent;
+            if (userAgent.indexOf("Internet Explorer") !== -1) {
+                window.location.href = "Ex3.html";
+            } else {
+                window.location.href = "Ex1.html";
+            }
+        }
+        window.onload = ssilka;
+    </script>
+</head>
+<body>
+    <h1>proverka</h1>
+</body>
+</html>
