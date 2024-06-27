@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Упражнение 18</title>
+    <script>
+        function moving() {
+            var element = document.getElementById("anil");
+            var currentTop = parseInt(element.style.top) || 0;
+
+            if (currentTop < 500) {
+                element.style.top = (currentTop + 2) + "px";
+                setTimeout(moving, 10);
+            }
+        }
+    </script>
+    <style>
+        #anil {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body onLoad="moving()">
+    <div id="anil">
+        Текст, шагом марш!
+    </div>
+</body>
+</html>
