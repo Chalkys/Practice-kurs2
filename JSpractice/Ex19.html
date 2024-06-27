@@ -1,0 +1,28 @@
+<head>
+    <title>Упражнение 19</title>
+    <script>
+    function moving() {
+        var text = document.getElementById("anim");
+        var currentTop = parseInt(anim.style.top) || 0;
+        var currentRight = parseInt(anim.style.right) || 0;
+        if (currentTop < 450 && currentRight < 875) {
+                anim.style.top = (currentTop + 2) + "px";
+                anim.style.right = (currentRight + 4) + "px";
+                setTimeout(moving, 10);
+            }
+    }
+    </script>
+    <style>
+        #anim {
+            position: absolute;
+            right: 10;
+            top: 10;
+        }
+    </style>
+    </head>
+    <body onLoad="moving()">
+        <div id="anim">
+           Текст, шагом марш!
+        </div>
+    </body>
+    </html>
