@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Упражнение 14</title>
+    <style>
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+        label, input, textarea {
+            display: block;
+            margin: 10px 0;
+        }
+        input, textarea {
+            width: 100%;
+        }
+    </style>
+    <script>
+        function upr14() {
+            var name = document.forms["dataForm"]["name"];
+            var password = document.forms["dataForm"]["password"];
+            var confirmPassword = document.forms["dataForm"]["confirmPassword"];
+            var email = document.forms["dataForm"]["email"];
+            var message = document.forms["dataForm"]["message"];
+
+            if (name.value.trim() === "") {
+                alert("Пожалуйста, введите ваше имя");
+                name.focus();
+                return false;
+            }
+
+            if (password.value.length <= 4) {
+                alert("Пароль должен содержать больше 4 символов");
+                password.focus();
+                return false;
+            }
+
+            if (password.value !== confirmPassword.value) {
+                alert("Пароли не совпадают");
+                confirmPassword.focus();
+                return false;
+            }
+
+            if (email.value.trim() === "" || !email.value.includes("@")) {
+                alert("Пожалуйста, введите корректный электронный адрес");
+                email.focus();
+                return false;
+            }
+
+            if (message.value.trim() === "" || message.value.length <= 10) {
+                alert("Сообщение должно содержать больше 10 символов");
+                message.focus();
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="dataForm" onsubmit="return upr14()">
+        <label for="name">Ваше имя: *</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="password">Пароль: *</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label for="confirmPassword">Подтверждение пароля: *</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        
+        <label for="email">Электронный адрес: *</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="subject">Тема сообщения:</label>
+        <input type="text" id="subject" name="subject">
+        
+        <label for="message">Сообщение: *</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <input type="submit" value="Отправить">
+        <input type="reset" value="Очистить">
+    </form>
+</body>
+</html>
