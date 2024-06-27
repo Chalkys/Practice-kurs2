@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Упражнение 6</title>
+</head>
+<body>
+<script>
+    document.write("<table border = 2>");
+        document.write("<tr>");
+            document.write("<th>Степень</th><th>Результат</th>");
+        document.write("</tr>");
+        
+        for (var i = 0; i < 6; i++) {
+            var user = i.toString();
+            document.write("<tr><th>2" + user.sup() + "</th><th>" + Math.pow(2, i) + "</th></tr>")
+        }
+    document.write("</table>");
+</script>
+</body>
+</html>
