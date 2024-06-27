@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Упражнение 12</title>
+    <style>
+        a {
+            color: blue;
+        }
+        a:hover {
+            color: red;
+        }
+    </style>
+    <script>
+        function upr12(url) {
+            if (confirm("Для продолжение требуется программа Acrobat. Желаете продолжить?")) {
+                alert("продолжаем загрузку");
+                window.open();
+            }
+            else {
+                alert("не продолжаем загрузку");
+            }
+        }
+        function backColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <p><a href = "#" onclick="upr12('document.pdf')">Открыть PDF файл</a></p>
+    <p><a href = "#" onmouseover = "backColor('red');" onmouseout="backColor('');">Смена фона</a></p>
+</body>
+</html>
