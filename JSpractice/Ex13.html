@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Упражнение 13</title>
+    <style>
+        img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+    <script>
+        function bigger(img) {
+            img.style.width = "1000px";
+        }
+        function smaller(img) {
+            img.style.width = "300px";
+        }
+    </script>
+</head>
+<body>
+    <img src="img2.jpg" onmouseover="bigger(this);" onmouseout="smaller(this);">
+</body>
+</html>
