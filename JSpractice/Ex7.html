@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Упражнение 7</title>
+    <script>
+        function upr7() {
+            var subjects = ["Матан", "Физика", "Химия", "Окружающий мир", "Литература", "История", "География", "Иностранный язык", "Информатика", "Экономика"];
+
+            var mat = subjects.slice(0, 3); 
+            var gum = subjects.slice(4, 8);
+
+            document.write("<h2>Точные науки:</h2>");
+            document.write(mat.join(", ") + "<br><br>");
+            document.write("<h2>Гуманитарные науки:</h2>");
+            document.write(gum.join(", "));
+        }
+    </script>
+</head>
+<body>
+    <h1>Список школьных предметов</h1>
+    <script>
+        upr7();
+    </script>
+</body>
+</html>
